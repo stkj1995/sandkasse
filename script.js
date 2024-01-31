@@ -65,7 +65,7 @@ function resetGame() {
   secretNumber = generateRandomNumber();
   numberOfGuesses = 0;
   document.getElementById("result").textContent = "";
-  document.querySelector("#tal").value = "";
+  document.querySelector("#guess").value = "";
 }
 
 // Initialiser spillet ved indlæsning
