@@ -1,0 +1,29 @@
+*/*CSS RESET*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  width: 150px;
+  cursor: pointer;
+}
