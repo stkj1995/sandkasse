@@ -1,4 +1,6 @@
 */*CSS RESET*/
+
+/*test1*/
 * {
   box-sizing: border-box;
 }
@@ -26,4 +28,33 @@ body {
 img {
   width: 150px;
   cursor: pointer;
+}
+
+/*test3*/
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
 }

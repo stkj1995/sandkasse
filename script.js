@@ -26,4 +26,49 @@ function getTimeOfDay() {
 
 getTimeOfDay();
 
+/*test3*/
+let secretNumber;
+let numberOfGuesses = 0;
 
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 11);
+}
+
+function checkGuess() {
+  const userGuess = parseInt(document.querySelector("#guess").value);
+
+  if (isNaN(userGuess) || userGuess < 0 || userGuess > 10) {
+    document.getElementById("result").textContent = "Indtast venligst et gyldigt tal mellem 0 og 10.";
+    return;
+  }
+
+  numberOfGuesses++;
+
+  if (userGuess === secretNumber) {
+    document.getElementById("result").textContent = "Tillykke! Du har gættet rigtigt på ${numberOfGuesses} forsøg.";
+    askForNewGame();
+  } else if (userGuess < secretNumber) {
+    document.getElementById("result").textContent = "For lavt. Prøv igen!";
+  } else {
+    document.getElementById("result").textContent = "For højt. Prøv igen!";
+  }
+}
+
+function askForNewGame() {
+  const playAgain = confirm("Vil du prøve igen med et nyt tal?");
+  if (playAgain) {
+    resetGame();
+  }
+}
+
+function resetGame() {
+  secretNumber = generateRandomNumber();
+  numberOfGuesses = 0;
+  document.getElementById("result").textContent = "";
+  document.querySelector("#guess").value = "";
+}
+
+// Initialiser spillet ved indlæsning
+window.onload = function () {
+  resetGame();
+};
